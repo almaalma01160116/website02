@@ -1,0 +1,71 @@
+/* Black & White — 原截圖原生像素尺寸 (1 CSS px = 截圖 1px)，頁寬 1392px。
+   想縮小到約 960px 寬：把 .page 的 zoom 改成 0.69 */
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font:26px/32.3px Arial,Helvetica,sans-serif;color:#444}
+a{color:inherit}
+.page{width:1392px;margin:0 auto;zoom:1}
+
+/* ---------- Header ---------- */
+/* 海浪圖：把素材放進 images/，改下面這一行檔名即可 (例如 header-wave.jpg) */
+.header{position:relative;height:200px;background:#777 url("../images/header-wave.svg") center/cover no-repeat}
+.logo{position:absolute;left:34px;top:20px;font:56px/62px Arial,Helvetica,sans-serif;color:#fff;white-space:nowrap}
+.logo span{color:#000}
+.slogan{position:absolute;left:34px;top:92px;font:bold 27px/32px Arial,Helvetica,sans-serif;color:#fff;letter-spacing:-.3px}
+
+/* ---------- Nav ---------- */
+.nav{margin-top:12px;height:65px;background:linear-gradient(#333,#000 55%,#111)}
+.nav ul{display:flex;list-style:none;padding-left:204px}
+.nav a{display:block;width:185.5px;height:65px;line-height:65px;text-align:center;color:#fff;font:bold 27px/65px Arial,Helvetica,sans-serif;text-decoration:none;letter-spacing:-.4px;transition:background .25s,text-shadow .25s,transform .15s}
+.nav .active a{text-decoration:underline;background:linear-gradient(#585858,#282828 55%,#1a1a1a)}
+.nav a:hover{background:linear-gradient(#606060,#2c2c2c 55%,#1e1e1e);text-shadow:0 0 8px rgba(255,255,255,.55)}
+.nav a:active{transform:translateY(1px)}
+
+/* ---------- Layout ---------- */
+.content{display:flex;min-height:1526px;background:#ececec;padding:0 8px}
+.sidebar{width:398px;margin-left:17px;padding-top:29px;font:24px/32px Verdana,Tahoma,Geneva,sans-serif;color:#222}
+.main{width:930px;margin-left:32px;padding-top:25px}
+
+/* ---------- 漸層按鈕 (純 CSS) ---------- */
+.btn-glossy{display:block;width:398px;height:76px;padding-left:34px;
+  border:3px solid #7a7a7a;border-radius:22px;
+  background:linear-gradient(#5e5e5e,#2a2a2a 49%,#000 51%,#1d1d1d);
+  box-shadow:inset 0 2px 2px rgba(255,255,255,.3),inset 0 -4px 6px rgba(0,0,0,.7),0 2px 4px rgba(0,0,0,.4);
+  color:#fff;font:bold 27px/70px Arial,Helvetica,sans-serif;text-decoration:none;text-shadow:0 1px 2px #000;
+  transition:background .25s,border-color .25s,box-shadow .25s,transform .15s}
+.btn-glossy:hover{background:linear-gradient(#7c7c7c,#3e3e3e 49%,#0c0c0c 51%,#303030);border-color:#b8b8b8;
+  box-shadow:inset 0 2px 2px rgba(255,255,255,.4),inset 0 -4px 6px rgba(0,0,0,.6),0 4px 8px rgba(0,0,0,.45);transform:translateY(-1px)}
+.btn-glossy:active{transform:translateY(1px);box-shadow:inset 0 3px 6px rgba(0,0,0,.85)}
+.news-btn{width:396px;height:73px;margin-left:2px;line-height:67px;margin-top:65px}
+
+/* ---------- Login ---------- */
+.login{padding-left:17px}
+.login label{display:block;margin-top:37px;letter-spacing:.3px}
+.login .l2{margin-top:13px}
+.login input{display:block;width:319px;height:40px;margin-top:1px;border:1px solid #aaa;background:#f1f1f1;font-size:22px;padding:0 6px;outline:0;transition:border-color .2s,box-shadow .2s}
+.login input:focus{border-color:#555;box-shadow:0 0 4px rgba(0,0,0,.35)}
+.btn-login{display:block;width:72px;height:33px;margin-top:16px;border:1px solid #999;background:transparent;font:24px/30px Verdana,Tahoma,sans-serif;color:#222;cursor:pointer;transition:background .2s,box-shadow .2s}
+.btn-login:hover{background:#dcdcdc;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.forgot{display:block;margin-top:11px;color:#222}
+.forgot:hover,.news a:hover{color:#000;text-decoration:none}
+
+/* ---------- News ---------- */
+.news{margin-top:38px;padding-left:18px}
+.news-item{width:372px}
+.news-item+.news-item{margin-top:39px}
+.news b{display:block;font:bold 27px/32px Georgia,"Times New Roman",serif;color:#222}
+.news a{display:block;color:#222}
+
+/* ---------- Main ---------- */
+.main h1{font:bold 56px/60px Arial,Helvetica,sans-serif;color:#000}
+.post h2{margin:22px 0 32px;font:bold 26px/30px Arial,Helvetica,sans-serif;letter-spacing:.5px;text-transform:uppercase;color:#000}
+.post:first-of-type h2{margin-top:25px}
+.post p+p{margin-top:19px}
+.meta{margin-top:16px;padding-right:5px;text-align:right;font:27px/32px Arial,Helvetica,sans-serif;color:#333}
+.meta a{text-decoration:none;transition:color .2s}
+.meta a:hover{color:#000;text-decoration:underline}
+.meta i{display:inline-block;width:9px;height:9px;margin:0 12px;background:#dcdcdc}
+
+/* ---------- Footer ---------- */
+.footer{margin:0 7px;height:130px;padding-top:39px;text-align:center;background:linear-gradient(#222,#000);color:#fff;font:bold 24px/32px Arial,Helvetica,sans-serif;letter-spacing:-.3px}
+.footer a{color:#fff;transition:color .2s}
+.footer a:hover{color:#bbb}
